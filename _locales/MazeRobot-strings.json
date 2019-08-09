@@ -1,0 +1,21 @@
+{
+  "MazeRobot.Detect|block": "启动迷宫探索",
+  "MazeRobot.Init|block": "初始化机器人",
+  "MazeRobot.Is_Finish|block": "完成探索",
+  "MazeRobot.Param.DIST_PER_CELL|block": "每格距离(默认175)",
+  "MazeRobot.Param.F_ERR_MARGIN|block": "前后校正容差(默认1)",
+  "MazeRobot.Param.F_WALL_CORRECT_DIST|block": "触发前后校正距离(默认140)",
+  "MazeRobot.Param.F_WALL_TARGET_DIST|block": "前后校正目标距离(默认25)",
+  "MazeRobot.Param.LR_TARGET_DIST|block": "直线位置参数(默认25)",
+  "MazeRobot.Param.MAX_ANGULER_SPEED|block": "转弯速度(默认70)",
+  "MazeRobot.Param.MAX_LINEAR_SPEED|block": "直线速度(默认90)",
+  "MazeRobot.Param.ORIGIN_FACE_DIR|block": "初始方向(默认0朝上，90朝右，180朝下，270朝左)",
+  "MazeRobot.Param.PARALLEL_CORRECT_TIMES|block": "平行校正次数(默认10)",
+  "MazeRobot.Param.PARALLEL_ERR_MARGIN|block": "平行校正容差(默认2)",
+  "MazeRobot.Param.TURN_COMPENSATION|block": "转向校正(默认-50)",
+  "MazeRobot.Param.WALL_DETECT_DIST|block": "墙面判断距离(默认80)",
+  "MazeRobot.Rush|block": "冲刺",
+  "MazeRobot.Set_Goal|block": "设置目的地坐标x=%x |y=%y",
+  "MazeRobot.Set_Param|block": "设置控制参数 %param | %value",
+  "{id:category}MazeRobot": "MazeRobot"
+}

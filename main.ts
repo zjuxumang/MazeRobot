@@ -1,0 +1,8 @@
+MazeRobot.Init()
+basic.showLeds(`
+    . . . . .
+    . # . # .
+    . . . . .
+    # . . . #
+    . # # # .
+    `);

@@ -7,9 +7,10 @@ CubeI2C::CubeI2C(MicroBitI2C* i2c_port, uint8_t address)
 
 uint32_t CubeI2C::I2CRead(uint8_t reg_address, uint8_t* temp) {
   int result;
-  result = i2c_port_->write((uint8_t)Addr<<1, (const char *)&reg_address, 1);
+  result=I2CWrite2Bytes(reg_address,0);
   if (result !=0)
       return 1;
+  wait_ms(10);
   result = i2c_port_->read((uint8_t)Addr<<1, (char *)temp, 1);
   if (result !=0)
       return 1;
@@ -27,12 +28,20 @@ uint32_t CubeI2C::I2CWrite(uint8_t reg_address, uint8_t value) {
   return ret;
 }
 
-uint32_t CubeI2C::I2CWrite16(uint8_t reg_address, uint16_t value) {
+uint32_t CubeI2C::I2CWrite2Bytes(uint8_t value1, uint8_t value2) {
   int ret = 0;
-  ret = i2c_port_->write((uint8_t)Addr<<1, (const char *)&reg_address, 1);
+  uint8_t temp[2];
+  temp[0]=value1;
+  temp[1]=value2;
+  ret = i2c_port_->write((uint8_t)Addr<<1, (const char *)&temp, 2);
   if (ret !=0)
       return 1;
-  ret = i2c_port_->write((uint8_t)Addr<<1, (const char *)&value, 2);
+  return ret;
+}
+
+uint32_t CubeI2C::I2CWriteBuffer(uint8_t* buf, uint8_t length) {
+  int ret = 0;
+  ret = i2c_port_->write((uint8_t)Addr<<1, (const char *)buf, length);
   if (ret !=0)
       return 1;
   return ret;

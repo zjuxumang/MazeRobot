@@ -1,8 +1,1 @@
-MazeRobot.Init()
-basic.showLeds(`
-    . . . . .
-    . # . # .
-    . . . . .
-    # . . . #
-    . # # # .
-    `);
+basic.showIcon(IconNames.Happy)

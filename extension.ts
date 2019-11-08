@@ -1,17 +1,17 @@
 //% color="#359eff" weight=20 icon="\uf1b2"
 namespace MazeRobot {
     export enum Param{
-        //% block="直行速度(默认100)"
+        //% block="直行速度(默认90)"
         MAX_LINEAR_SPEED        =0x01,
         //% block="转向速度(默认70)"
         MAX_ANGULER_SPEED       =0x02,
         //% block="一格距离(默认175)"
         DIST_PER_CELL           =0x03,
-        //% block="贴墙前进时与墙面距离(默认80)"
+        //% block="贴墙前进时与墙面距离(默认25)"
         WALL_KEEP_DIST          =0x04,
-        //% block="探墙阈值(默认140)"
+        //% block="探墙阈值(默认60)"
         WALL_DETECT_DIST        =0x05,
-        //% block="前后校准阈值(默认25)"
+        //% block="前后校准阈值(默认140)"
         F_WALL_CORRECT_THRESHOLD=0x06,
         //% block="前后校准目标值(默认25)"
         F_WALL_TARGET_DIST      =0x07,
@@ -21,7 +21,7 @@ namespace MazeRobot {
         PARALLEL_ERR_MARGIN     =0x09,
         //% block="平行校正次数(默认10)"
         PARALLEL_CORRECT_TIMES  =0x0A,
-        //% block="转向角度补偿(默认0)"
+        //% block="转向补偿(默认0)"
         TURN_COMPENSATION       =0x0B,
     }
     export enum Motor_ID{
